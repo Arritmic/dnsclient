@@ -8,10 +8,10 @@ default: dnsclient
 all: default
 
 %.o: %.cc $(HEADERS)
-	g++- $(CPPFLAGS) -c $< -o $@
+	g++ $(CPPFLAGS) -c $< -o $@
 
 dnsclient: $(OBJECTS)
-	g++- $(CPPFLAGS) $(OBJECTS) -o $@
+	g++ $(CPPFLAGS) $(OBJECTS) -o $@
 
 clean:
 	-rm -f $(OBJECTS)
